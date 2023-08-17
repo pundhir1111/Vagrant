@@ -1,1 +1,21 @@
+Vagrant-
 
+Features of Vagrant- 
+1. Network
+2. Sync Folders
+3. Vagrant BOxfile
+4. Provider Customizations
+5. Provisioners
+6. Multi-Machine Vagrant
+Q: Where you should write the vagrantfile?
+If we are working on a java project, the project directory structure looks like-
+project
+-src
+--main
+---java
+---resources
+---webapp
+-----web-INF
+-----web.xml
+-POM.xml
+-Vagrant configration file

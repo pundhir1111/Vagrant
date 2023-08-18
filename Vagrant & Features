@@ -19,3 +19,18 @@ project
 -----web.xml
 -POM.xml
 -Vagrant configration file
+
+
+How to create vagrant file?
+Vagrant.configure(2) do | config |
+end
+
+Create a first vm using vagrant?
+
+Vagrant.configure(2) do | config |
+config.vm.box="hashicorp/precise64"
+end
+
+
+
+

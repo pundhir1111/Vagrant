@@ -1,0 +1,36 @@
+CLI commands of Vagrant machine-
+
+vagrant init-create an vagrant file with default configration
+vagrant up-brings the VM
+vagrant ssh- ssh into VM
+vagrant halt- shutdown the vM
+vagrant status-tells the status of the vM
+vagrant suspend]-save the current state of machine and power-off
+vagrant resume-boots back the machine to the same state
+vagrant relod-restart the VM
+vagrant destroy- Will stop and deleter the vm including the vdi file.
+
+Global command-
+vagrant global-status- We can run this command from anywhere in th eterminal,need not be in project directory and shows the status of all 
+the vagrant machine on the host.
+
+How does the vagrant machine booted.
+1.On vargarnt init vagrant download the vbox file from the cloud and we can create multiple virtual machine from the same file.
+~/vagrant.d/boxes
+2.On vagrant init vagrant download the vbox file from cloud and import the box file in project directory and it create the vdi 
+file for each and every VM.
+create vdi file- ~/Vertualbox Vms/
+3.booting up the machine-
+upon running  the vagrant up inside the project directory first time. Vagrant create an ,vagrant directory inside the project directory.
+it keeps the info like.
+-vdi file location
+-networking configration
+-ssh keys for authentication
+-sync folders
+-vagrant machine name etc.
+By default vagrant create the network is NAT with port forward.
+-create an .vagrant directory
+-genrate an id for VM
+-genrate the publicc and private key
+-NAT with port forwarding 22
+

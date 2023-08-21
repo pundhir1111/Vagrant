@@ -1,0 +1,34 @@
+When it comes to oracle VB networking, it support 7 networking mode.
+1.Not Attached
+2. NAT
+3.Nat NetNetwork
+4.Host only network
+Internal Network
+Bridge Network
+Genric driver
+
+But we need to write the vagrant networking configration in vagrant file, so that vagrant takes care of mapping this vagrant specific netwrking
+mode in underlying hypervisor provider networking mode while provisining the VM, so that our machine configure will be provide accross all
+hypervisor provider.
+
+Vagrant support 3 types network mode.
+1.forwarded_port-NAT with port forwarding-
+during the developement of application developer can setup the server env to test his code, he has written by using virtualbox net network
+so that VM can access external network.
+2.Private Network-Internal Networking
+All VM should connect to the same private network and can communicate to each other.But VM do't have the Host/external network vise varsa
+to host/ext network can't access the vms'
+3.Public network-Bridge Network- Bridge network in oracle VM, less secured, not used in production.We can allow the VM access from
+anywhere.
+
+How to configure these networking mode using vagrant?
+syntex-
+vagrant.configure(2) do | config |
+config.vm.box = "boxname"
+config.vm.synced folder "source","destination"
+config.vm.network"networkmode"
+end
+
+Ex- config
+
+
